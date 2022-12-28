@@ -8,7 +8,6 @@ sudo apt upgrade -y;
 # Program: sed
 # Purpose: Text transformation utility.
 # Quickstart: https://youtu.be/nXLnx8ncZyE
-
 echo -e Installing \'sed\'.
 sudo apt install sed -y
 
@@ -17,7 +16,6 @@ sudo apt install sed -y
 # Program: nano
 # Purpose: Terminal-based text editor.
 # Quickstart: https://youtu.be/DLeATFgGM-A
-
 echo -e Installing \'nano\'.
 sudo apt install nano -y
 
@@ -51,7 +49,6 @@ sudo apt install ffmpeg -y
 # Program: git
 # Purpose: Version control.
 # Quickstart: https://youtu.be/u1Zvkqjx0Ik
-
 echo -e Installing \'git\'.
 sudo apt install git -y
 
@@ -68,7 +65,6 @@ git config --global core.editor "nano"
 #	https://docs.python-guide.org/starting/install3/linux/
 #	https://launchpad.net/~deadsnakes/+archive/ubuntu/ppa
 #	https://stackoverflow.com/a/61210682/13279616
-
 echo -e Installing \'python\'.
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update -y
@@ -83,6 +79,5 @@ sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.11 10
 # Purpose: Package manager for Python.
 # Additional Links:
 #	https://pip.pypa.io/en/latest/installation/
-
 echo -e Installing \'pip\'.
 python -m ensurepip --upgrade
