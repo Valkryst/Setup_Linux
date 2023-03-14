@@ -65,29 +65,3 @@ echo -e Installing \'git-lfs\'.
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
 sudo apt update -y
 sudo apt install git-lfs -y
-
-
-
-# Program: Python
-# Purpose: Programming language.
-# Quickstart: 
-# Additional Links:
-#	https://docs.python-guide.org/starting/install3/linux/
-#	https://launchpad.net/~deadsnakes/+archive/ubuntu/ppa
-#	https://stackoverflow.com/a/61210682/13279616
-echo -e Installing \'python\'.
-sudo add-apt-repository ppa:deadsnakes/ppa
-sudo apt update -y
-sudo apt install python3.11
-
-echo -e Configuring \'python\'.
-sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.11 10
-
-
-
-# Program: pip
-# Purpose: Package manager for Python.
-# Additional Links:
-#	https://pip.pypa.io/en/latest/installation/
-echo -e Installing \'pip\'.
-python -m ensurepip --upgrade
