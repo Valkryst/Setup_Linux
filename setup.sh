@@ -69,7 +69,7 @@ sudo apt install git-lfs -y
 
 
 # Program: asdf
-# Purpose: Tool version manager. e.g. Use a differeny Python, Java, Node, etc... version in each folder.
+# Purpose: Tool version manager. e.g. Use a different Python, Java, Node, etc... version in each folder.
 # Quickstart: https://asdf-vm.com/guide/introduction.html
 echo -e Installing \'asdf\'.
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.11.2
