@@ -1,7 +1,7 @@
 #!/bin/bash
 
-sudo apt update -y;
-sudo apt upgrade -y;
+sudo apt update -y
+sudo apt upgrade -y
 
 
 
@@ -55,6 +55,16 @@ sudo apt install git -y
 echo -e Configuring \'git\'.
 git config --global color.ui auto
 git config --global core.editor "nano"
+
+
+
+# Program: git-lfs
+# Purpose: Version control.
+# Quickstart: https://youtu.be/uLR1RNqJ1Mw
+echo -e Installing \'git-lfs\'.
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+sudo apt update -y
+sudo apt install git-lfs -y
 
 
 
