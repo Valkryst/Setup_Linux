@@ -65,3 +65,18 @@ echo -e Installing \'git-lfs\'.
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
 sudo apt update -y
 sudo apt install git-lfs -y
+
+
+
+# Program: asdf
+# Purpose: Tool version manager. e.g. Use a differeny Python, Java, Node, etc... version in each folder.
+# Quickstart: https://asdf-vm.com/guide/introduction.html
+echo -e Installing \'asdf\'.
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.11.2
+
+echo -e Configuring \'asdf\'.
+bashrc_file=~/.bashrc
+echo -e "\n# asdf" >> $bashrc_file
+echo . "$HOME/.asdf/asdf.sh" >> $bashrc_file
+echo . "$HOME/.asdf/completions/asdf.bash" >> $bashrc_file
+source $bashrc_file
