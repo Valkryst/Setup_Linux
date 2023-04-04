@@ -74,9 +74,45 @@ sudo apt install git-lfs -y
 echo -e Installing \'asdf\'.
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.11.2
 
-echo -e Configuring \'asdf\'.
 bashrc_file=~/.bashrc
+
+echo -e Configuring \'asdf\'.
 echo -e "\n# asdf" >> $bashrc_file
 echo . "$HOME/.asdf/asdf.sh" >> $bashrc_file
 echo . "$HOME/.asdf/completions/asdf.bash" >> $bashrc_file
 source $bashrc_file
+
+
+
+# Program: direnv
+# Purpose: Automatic loading of environment variables.
+# Quickstart: https://direnv.net/
+echo -e Installing \'direnv\'.
+sudo apt install direnv -y
+
+echo -e Configuring \'direnv\'.
+
+direnv_folder=~/.config/direnv
+direnv_file=$direnv_folder/direnv.toml
+mkdir --parents $direnv_folder
+touch $direnv_file
+echo "[global]" >> $direnv_file
+echo "load_dotenv = true" >> $direnv_file
+
+echo -e "\n# direnv" >> $bashrc_file
+echo "eval $(direnv hook bash)" >> $bashrc_file
+source $bashrc_file
+
+
+
+# Program: screen
+# Purpose: Virtual terminal management.
+# Quickstart: https://linuxhandbook.com/screen-command/
+echo -e Installing \'screen\'.
+sudo apt install screen -y
+
+screenrc_file=~/.screenrc
+
+echo -e Configuring \'screen\'.
+touch $screenrc_file
+echo -e "shell /bin/bash" >> $screenrc_file
