@@ -116,3 +116,12 @@ screenrc_file=~/.screenrc
 echo -e Configuring \'screen\'.
 touch $screenrc_file
 echo -e "shell /bin/bash" >> $screenrc_file
+
+
+
+# Program: lazydocker
+# Purpose: A terminal UI for docker & docker-compose.
+# Quickstart: https://github.com/jesseduffield/lazydocker#usage
+echo -e Installing \'lazydocker\'.
+asdf install lazydocker latest
+asdf global lazydocker latest
