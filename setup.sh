@@ -123,5 +123,6 @@ echo -e "shell /bin/bash" >> $screenrc_file
 # Purpose: A terminal UI for docker & docker-compose.
 # Quickstart: https://github.com/jesseduffield/lazydocker#usage
 echo -e Installing \'lazydocker\'.
+asdf plugin add lazydocker https://github.com/comdotlinux/asdf-lazydocker.git
 asdf install lazydocker latest
 asdf global lazydocker latest
