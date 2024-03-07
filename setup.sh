@@ -5,14 +5,6 @@ sudo apt upgrade -y
 
 
 
-# Program: build-essential
-# Purpose: A package containing tools such as libc, gcc, g++, make, dpkg-dev, etc...
-# https://www.gnu.org/software/make/
-echo -e Installing \'build-essential\'.
-sudo apt install build-essential -y
-
-
-
 # Program: sed
 # Purpose: Text transformation utility.
 # Quickstart: https://youtu.be/nXLnx8ncZyE
@@ -89,6 +81,37 @@ echo -e "\n# asdf" >> $bashrc_file
 echo . "$HOME/.asdf/asdf.sh" >> $bashrc_file
 echo . "$HOME/.asdf/completions/asdf.bash" >> $bashrc_file
 source $bashrc_file
+
+
+# Program: build-essential
+# Purpose: A package containing tools such as libc, gcc, g++, make, dpkg-dev, etc...
+# https://www.gnu.org/software/make/
+echo -e Installing \'build-essential\'.
+sudo apt install build-essential -y
+
+
+
+# Program: OpenSSL
+# Purpose: Both the runtime and development toolkit/libraries for general-purpose cryptographic security.
+# https://www.openssl.org/
+echo -e Installing \'openssl\' and \'libssl-dev\'.
+sudo apt install openssl libssl-dev -y
+
+
+
+# Program: zlib1g
+# Purpose: Both the runtime and development portions of a compression library required to build asdf-python.
+# https://www.zlib.net/
+echo -e Installing \'zlib1g\' and \'zlib1g-dev\'.
+sudo apt install zlib1g zlib1g-dev -y
+
+
+
+# Program: asdf-python
+# Purpose: Adds Python support to asdf.
+# https://github.com/asdf-community/asdf-python
+echo -e Installing \'asdf-python\'.
+asdf plugin-add python
 
 
 
