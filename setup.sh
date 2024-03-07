@@ -5,6 +5,14 @@ sudo apt upgrade -y
 
 
 
+# Program: build-essential
+# Purpose: A package containing tools such as libc, gcc, g++, make, dpkg-dev, etc...
+# https://www.gnu.org/software/make/
+echo -e Installing \'build-essential\'.
+sudo apt install build-essential -y
+
+
+
 # Program: sed
 # Purpose: Text transformation utility.
 # Quickstart: https://youtu.be/nXLnx8ncZyE
